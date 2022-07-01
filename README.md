@@ -17,3 +17,10 @@ Sub Problems:
 6. How do we extend the functionality to up to 4 pomodoros?
 7. How do we congratulate the user for complete a full pomodoro?
 
+
+-----------------------------------
+
+July 1:
+
+For some reason, I thought I could rework the logic and simplify this problem. So far, I seem to have created a mess for myself. I will take a break and try reworking my thought process later.
+
