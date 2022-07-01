@@ -24,3 +24,5 @@ July 1:
 
 For some reason, I thought I could rework the logic and simplify this problem. So far, I seem to have created a mess for myself. I will take a break and try reworking my thought process later.
 
+UPDATE:
+As suspected, I have made this problem entirely too complicated by not taking the time to think through it properly initially. All that is really needed is a way to countdown from 60 then reduce the minutes until you hit 0.  Testing this new approacch in the terminal with node before implementing it with a server.
