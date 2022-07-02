@@ -26,3 +26,11 @@ For some reason, I thought I could rework the logic and simplify this problem. S
 
 UPDATE:
 As suspected, I have made this problem entirely too complicated by not taking the time to think through it properly initially. All that is really needed is a way to countdown from 60 then reduce the minutes until you hit 0.  Testing this new approacch in the terminal with node before implementing it with a server.
+
+
+-----------------------------------
+
+July 2:
+
+Ok, the core part of the problem is solved. using setTimeout and an arrow function allows the countdown. Now, I can transfer my code from the testing section to display on the HTML.
+
