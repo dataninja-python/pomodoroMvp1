@@ -34,3 +34,10 @@ July 2:
 
 Ok, the core part of the problem is solved. using setTimeout and an arrow function allows the countdown. Now, I can transfer my code from the testing section to display on the HTML.
 
+
+-----------------------------------
+
+July 3:
+
+Officially, I have solved the timer problem - in MVP...in the console. Now, I will transfer the code over to a version that displays in the browser.
+
