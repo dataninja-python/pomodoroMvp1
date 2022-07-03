@@ -1,48 +1,65 @@
 window.onload = function(event) {
 	event.preventDefault();
-	const pomodoroObj = {
-		pomodoroMasterLaunchTime:
-	}
-	main()
-};
+	main();
+}
 
 const main = () => {
-	displayTime();
-	setTimeout(main, 1000);
-};
+	// displayToBrowser("Hello World");
+	// setTimeout(() => { main() }, 1000);
+	runPomodoro();
+}
 
-const displayTime = () => {
-	let timeOutput = getTime();
+const runPomodoro = () => {
+	let pomodoroObj = setUp();
+}
+
+const pomodoroLoop = (passedObj) => {
+	let internalObj = passedObj;
+}
+
+const stopPomodoroLoop = () => {
+	clearInterval(pomodoroLoop);
+}
+
+const setUp = () => {
+	let setUpObj = resetValues();
+	return setUpObj
+}
+
+const resetValues = () => {
+	// assume that reset can be used to set up and break down the progra
+	// assign constants to variables
+	const focusMin = 25;
+	const restMin = 5;
+	const startSecs = 60;
+	const states = ["Cycle Start", "Focus", "Rest", "Waiting", "Cycle End"];
+	const startChangeState = true;
+
+	// create base object
+	let resetObj = {
+		startFocusTimer: 0,
+		startRestTimer: 0,
+		startSecs: 0,
+		currMinTimer: 0,
+		currSecTimer: 0,
+		states: ["", ""],
+		currentState: "",
+		currentTextTime: "",
+		changeState: false
+	}
+
+	// set object starting values
+	resetObj.startFocusTimer = focusMin;
+	resetObj.startRestTimer = restMin;
+	resetObj.startSecs = startSecs;
+	resetObj.states = states;
+	resetObj.changeState = startChangeState;
+
+	return resetObj;
+}
+
+const displayToBrowser = (msg) => {
 	document.getElementById("MainClock").innerHTML="";
-	document.getElementById("MainClock").innerHTML=timeOutput;
-};
-
-const getTime = () => {
-	const rightNow = new Date();
-	console.log(rightNow);
-
-	let hh = rightNow.getHours();
-	console.log(hh);
-	let mm = rightNow.getMinutes();
-	console.log(mm);
-	let ss = rightNow.getSeconds();
-	console.log(ss);
-	// let outputM = formatTime(m);
-	// let outputS = formatTime(s);
-
-	let textTime = hh + ":" + mm + ":" + ss;
-
-	return textTime;
-};
-
-const formatTime = (t) => {
-	let temp = t;
-	let output  = "";
-
-	if (temp < 10) {
-		output =  "0" + temp.toString();
-	};
-
-	return output;
+	document.getElementById("MainClock").innerHTML=msg;
 };
 
