@@ -5,15 +5,24 @@
 		<title></title>
 		<meta name="" content="">
 		<meta name="" content="">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
 		<script src="index.js"></script>
 	</head>
 
 	<body>
 		<div id="page-wrapper">
-			<h1>A Pomodoro Timer</h1>
-			<div id="StartTime"></div>
-			<div id="Progress"></div>
-			<div id="MainClock" class="clock"></div>
+			<div>
+				<h1>A Pomodoro Timer</h1>
+				<div class="clock-parent">
+					<div id="MainClock" class="clock clock-time-child clock-child"></div>
+					<div class="button-wrapper button clock-buttn-child clock-child">
+						<div class="timer-buttons button"><button>Start</button></div>
+						<div class="timer-buttons button"><button>Pause</button></div>
+						<div class="timer-buttons button"><button>Stop</button></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 

@@ -1,4 +1,15 @@
-.clock {
-	color: blue;
-	font-weight: bold;
+button {
+	border: black;
 }
+
+
+#MainClock {
+	text-align: center;
+	color: blue;
+}
+
+.button-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
