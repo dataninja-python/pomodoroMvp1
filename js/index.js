@@ -1,4 +1,10 @@
-window.onload = function(event) {
+window.addEventListener('load', (e) => {
+	e.preventDefault();
+	console.log("loaded from inside js sheet");
+	document.querySelector("#display").innerHTML = "javascript loaded after 2.5 secs";
+}); 
+
+	/* function(event) {
 	event.preventDefault();
 	let btnParent = document.querySelector("#btns");
 	let newBtn = document.createElement("button");
@@ -12,7 +18,7 @@ window.onload = function(event) {
 	window.location.reload(true);
 	// createElement();
 	// main();
-}
+	*/
 
 const main = () => {
 	let mainObj = runPomodoro();
