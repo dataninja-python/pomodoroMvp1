@@ -1,20 +1,55 @@
 window.onload = function(event) {
 	event.preventDefault();
-	main();
+	let btnParent = document.querySelector("#btns");
+	let newBtn = document.createElement("button");
+
+	newBtn.setAttribute("id", "start-btn");
+	newBtn.className = "button-primary";
+	newBtn.innerText = "Start";
+	newBtn.addEventListener("click", startTimer);
+	btnParent.appendChild(newBtn);
+
+	window.location.reload(true);
+	// createElement();
+	// main();
 }
 
 const main = () => {
-	// displayToBrowser("Hello World");
-	// setTimeout(() => { main() }, 1000);
-	runPomodoro();
+	let mainObj = runPomodoro();
+	let tmpObj = resetValues();
+	mainObj = tmpObj;
+}
+
+const createElement = () => {
+	let btnParent = document.querySelector("#Btn-section");
+	let newBtn = document.createElement("button");
+	newBtn.setAttribute("id", "start-button");
+	newBtn.className = "button-primary";
+	newBtn.innerText = "Start";
+	newBtn.addEventListener("click", startTimer);
+	btnParent.appendChild(newBtn);
+}
+
+const startTimer = () => {
+	console.log("start button clicked");
 }
 
 const runPomodoro = () => {
 	let pomodoroObj = setUp();
+	// pomodoroLoop(pomodoroObj);
+	return pomodoroObj;
 }
 
 const pomodoroLoop = (passedObj) => {
 	let internalObj = passedObj;
+	displayTime();
+	const timerInterval = setInterval(() => { pomodoroLoop(internalObj }, 1000);
+}
+
+const displayTime = () => {
+	const dateNow = new Date();
+	const tmpTimeTxt = dateNow.toString();
+	displayToBrowser(tmpTimeTxt);
 }
 
 const stopPomodoroLoop = () => {
