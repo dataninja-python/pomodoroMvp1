@@ -1,15 +1,6 @@
 const main = (event) => {
 	console.log("main function started");
 
-	// set constants
-	const startFocusMinutes = 25;
-	const startRestMinutes = 5;
-	const startSeconds = 60;
-	const states = ["Focus", "Rest", "Waiting"];
-	let currentMinutes;
-	let currentSeconds;
-	let currentState = "";
-
 	let stateElement = document.querySelector("#status-state");
 	let minutesElement = document.querySelector("#min-counter");
 	let secondsElement = document.querySelector("#sec-counter");
@@ -18,10 +9,114 @@ const main = (event) => {
 	minutesElement.innerHTML = String(23);
 	secondsElement.innerHTML = String(53);
 
+	// set constants
+	const startFocusMinutes = 25;
+	const startRestMinutes = 5;
+	const startSeconds = 60;
+	const states = ["Focus", "Rest", "Waiting"];
+	let currentMinutes = 0;
+	let currentSeconds = 0;
+	let timerObj = {
+		focusTime: 0,
+		restTime: 0,
+		seconds: 0,
+		states: [],
+		stateDOMObj: {},
+		minDOMObj: {},
+		secDOMObj: {},
+		changeState: true, // should change to true when next change of a minute results in 0 minutes
+		currentState: "",
+		currentMin: 0,
+		currentSec: 0,
+	};
+
+	timerObj.focusTime = startFocusMinutes;
+	timerObj.restTime = startRestMinutes;
+	timerObj.seconds = startSeconds;
+	timerObj.states = states;
+
+	timerObj.stateDOMObj = stateElement;
+	timerObj.minDOMObj = minutesElement;
+	timerObj.secDOMObj = secondsElement;
+
+	timerObj.stateDOMObj.innerHTML = "TEST";
+
+	const setUp = (passedObj) => {
+		let tmpObj = passedObj;
+		let tmpStates = tmpObj.states;
+
+		switch (true) {
+			case (tmpObj.changeState == true && tmpObj.currentState == ""):
+				console.log("setting up countdown");
+				let currentMinutes = tmpObj.focusTime;
+				let currentSeconds = tmpObj.seconds;
+				tmpObj.currentMin = currentMinutes;
+				tmpObj.currentSec = currentSeconds;
+				tmpObj.currentState = tmpStates[0];
+				tmpObj.changeState = false;
+				break;
+			case tmpObj.currentState == tmpStates[0]:
+			case tmpObj.currentState == tmpStates[1]:
+			case tmpObj.currentState == tmpStates[2]:
+				break;
+			default:
+				console.log("error iin setup function");
+		};
+		return tmpObj;
+	};
+
+	const decreaseTime = (passedTime) => {
+		return --passedTime
+	};
+
+	const runTimer = (passedObj) => {
+		let tmpObj = passedObj;
+		let states = tmpObj.states;
+		let startSecs = tmpObj.seconds;
+		let changeState = tmpObj.changeState;
+		let currentState = tmpObj.currentState;
+		let currentMin = tmpObj.currentMin;
+		let currentSec = tmpObj.currentSec;
+
+		// display the current values
+		
+		// Change the values with large switch value below
+		switch(true) {
+			case (changeState == true && currentState == ""): // switch to focus state and start
+				tmpObj = setUp(tmpObj);
+				break;
+			case (currentMin == 0 && currentSec == 0 && currentState == states[0]): // switch to rest state
+				// enter the code
+				break;
+			case (currentMin == 0 && currentSec == 0 && currentState == states[1]): // switch to waiting state and stop
+				// enter the code
+				break;
+			case (currentSec == 0): // decrease minutes and restart seconds
+				// enter the code
+				break;
+			default: // uh, our logic is screwed up
+				console.log("error in runTimer function");
+		}
+
+		return tmpObj;
+
+	};
+
 	// quick pseudocode
-	// set everything up if first time
-	// clean everything up if end
+	// if first pomodoro set everything up
+	// count down from 60 seconds
+	// at end of each count down decrease minutes
+	// when minutes and seconds equal zero a pomodoro is done
+	// if last pomodoro or stopped by user end
 	
+	// how to tell first pomodoro
+	/* let aMin = 60
+	setInterval( ()=>{
+		let tmpMin = aMin;
+		console.log(tmpMin);
+		aMin = decreaseTime(tmpMin);
+	}, 1000);*/
+
 };
 
 

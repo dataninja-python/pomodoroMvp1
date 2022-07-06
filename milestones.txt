@@ -67,3 +67,6 @@ It is astounding how much HTML and CSS I have forgotten. A good portion of time 
 	- update:
 		- the UX/UI is less than ideal but it is workable enough
 		- I will now switch to create a start and stop button
+		- logic is not clean but making good progress towards getting a functional timer running quickly through the DOM
+		- added decrement, setup, and other functionality
+		- tested that program can run setInterval with passed parameters using an anonymous function
