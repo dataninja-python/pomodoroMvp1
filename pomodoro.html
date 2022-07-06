@@ -19,9 +19,9 @@
 
 	  <!-- CSS
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	  <link rel="stylesheet" type="text/css" href="./css/skeleton.css">
-	  <link rel="stylesheet" type="text/css" href="./css/clock.css">
+	  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	  <link rel="stylesheet" type="text/css" href="css/pomodoro.css">
 
 	  <!-- Favicon
 	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,33 +29,34 @@
 	</head>
 
 	<body>
-
-	  <!-- Page Container
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<main class="constainer">
-		<section class="section hero center">
-			<div class="time-wraper row">
-				<span class="inner-time-wrapper" style="margin-top: 25%">
-					<time id="time-display" class="time">00:00:00</time>
-					<span class="ampm" id="ampm">am</span>
-				</span>
-			</div>
-		</section>
-		<section class="center">
-			<div class="row button-container">
-				<div id="btns">
-					<button id="stop-button" class="button" >Stop Timer</button>
+		<div class="container">
+			<main class="constainer clock-wrapper">
+				<section class="timer-section">
+					<div class="status-container row">
+						<div class="one-half column center">
+							FOCUS
+						</div>
+					</div>
+					<div class="status-container row">
+						<div class="four columns">
+							<h2>00</h2>
+							<p>Minutes</p>
+						</div>
+						<div class="three columns">
+							<h4>00</h4>
+							<p>Seconds</p>
+						</div>
+					</div>
+				</section>
+				<section class="controls-section">
+				</section>
 				</div>
-			</div>
-		</section>
-	</main>
-
-	<!-- End Document
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	  <footer><h3>clock page footer</h3>
-	  <p>inpirated by: https://codepen.io/mattdanielbrown</p>
-	  </footer>
-	  	<!--  External JavaScript ------------------------------------->
-	  	<script crossorigin="anonymous" type="text/javascript" src="./js/clock.js"></script>
+			</main>
+			<footer>
+				<h6>&copy; 2022 github.com/dataninja-python</h6>
+				<p>inspired by: a lot of helpful creators and tutorials along my journey.</p>
+			</footer>
+		</div>
+		<script crossorigin="anonymous" type="text/javascript" src="./js/pomodoro.js"></script>
 	</body>
 </html>

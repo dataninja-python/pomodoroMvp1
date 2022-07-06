@@ -58,3 +58,8 @@ I am absolutely confused as to why setInterval refuses to call the timer functio
 
 Still confused. Instead of getting frustrated, I'm going to build a new clock page.
 
+-----------------------------------
+
+Jul 6
+
+It is astounding how much HTML and CSS I have forgotten. A good portion of time has been spent trying to just get the simple timer page to show as desired.
