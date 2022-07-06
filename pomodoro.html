@@ -2,59 +2,42 @@
 <html lang="en">
 	<head>
 
-	  <!-- HTML Page Core
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <meta charset="utf-8">
 	  <title>Clock</title>
 	  <meta name="description" content="">
 	  <meta name="author" content="">
 
-	  <!-- Mobile Display Core
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	  <!-- FONT
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-	  <!-- CSS
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <link rel="stylesheet" type="text/css" href="css/normalize.css">
 	  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	  <link rel="stylesheet" type="text/css" href="css/pomodoro.css">
 
-	  <!-- Favicon
-	  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	  <link rel="icon" type="image/png" href="images/favicon.png">
 	</head>
 
 	<body>
-		<div class="container">
-			<main class="constainer clock-wrapper">
-				<section class="timer-section">
-					<div class="status-container row">
-						<div class="one-half column center">
-							FOCUS
+		<div class="container page-container">
+			<main class="container clock clock-wrapper">
+				<section class="container timer-container">
+					<div class="row">
+						<div class="eight columns minutes-container">
+							<h2 id="min-counter">00</h2>
 						</div>
-					</div>
-					<div class="status-container row">
-						<div class="four columns">
-							<h2>00</h2>
-							<p>Minutes</p>
-						</div>
-						<div class="three columns">
-							<h4>00</h4>
-							<p>Seconds</p>
+						<div class="four columns status-container minutes-container">
+							<div class="row status-wrapper">
+								<h6 id="status-state">FOCUS</h6>
+							</div>
+							<div class="row seconds-wrapper">
+								<h4 id="sec-counter">00</h4>
+							</div>
 						</div>
 					</div>
 				</section>
-				<section class="controls-section">
-				</section>
-				</div>
+				<section class="container controls-container"></section>
 			</main>
-			<footer>
+			<footer class="container footer">
 				<h6>&copy; 2022 github.com/dataninja-python</h6>
-				<p>inspired by: a lot of helpful creators and tutorials along my journey.</p>
 			</footer>
 		</div>
 		<script crossorigin="anonymous" type="text/javascript" src="./js/pomodoro.js"></script>

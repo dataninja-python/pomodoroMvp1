@@ -1,13 +1,30 @@
+/* assumes watching on phone first */
+/* * {
+	border: 2px solid red;
+}*/
 
-/* assume watching on phone first */
-.page-wrapper {
+.page-container {
+	margin-top: 15%;
+}
+
+.status-wrapper {
+	grid-auto-rows: auto;
+	border: 2px solid red;
+}
+
+.seconds-wrapper {
+	grid-auto-rows: 30px;
+	border: 2px solid red;
+}
+
+/* Reserved CSS */
+/*
+.page-container {
+	margin-top: 25%;
 	border: 1px solid red;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
-.clock-wrapper {}
-
-
+*/

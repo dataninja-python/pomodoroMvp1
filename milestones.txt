@@ -63,3 +63,7 @@ Still confused. Instead of getting frustrated, I'm going to build a new clock pa
 Jul 6
 
 It is astounding how much HTML and CSS I have forgotten. A good portion of time has been spent trying to just get the simple timer page to show as desired.
+
+	- update:
+		- the UX/UI is less than ideal but it is workable enough
+		- I will now switch to create a start and stop button
