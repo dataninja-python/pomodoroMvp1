@@ -118,12 +118,34 @@ const main = (event) => {
 	// when minutes and seconds equal zero a pomodoro is done
 	// if last pomodoro or stopped by user end
 	
-	let aMin = startSeconds;
+	const minuteCountDown = (passedObj) => {
+		let tmpObj = passedObj;
+		let currentMin = tmpObj.currentMin;
+		tmpObj.minDOMObj.innerHTML = String(currentMin);
+		currentMin = decreaseTime(currentMin);
+		tmpObj.currentMin = currentMin;
+		return tmpObj;
+	};
+	
+	const secondCountDown = (passedObj) => {
+		let tmpObj = passedObj;
+		let currentSec = tmpObj.currentSec;
+		tmpObj.secDOMObj.innerHTML = String(currentSec);
+		currentSec = decreaseTime(currentSec);
+		tmpObj.currentSec = currentSec;
+		return tmpObj;
+	};
+	
+	// let aMin = startSeconds;
 	// how to tell first pomodoro
-	setInterval( ()=>{
+	/* setInterval( ()=>{
 		timerObj.secDOMObj.innerHTML = String(aMin);
 		let tmpSec = aMin;
 		aMin = decreaseTime(tmpSec);
+	}, 1000); */
+
+	setInterval( ()=>{
+		timerObj = minuteCountDown(timerObj);
 	}, 1000);
 
 };

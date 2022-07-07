@@ -72,3 +72,10 @@ It is astounding how much HTML and CSS I have forgotten. A good portion of time 
 		- tested that program can run setInterval with passed parameters using an anonymous function
 		- seconds successfully counting down in their container
 
+
+-----------------------------------
+
+Jul 7
+
+Interestingly, I was able to create two quick count down functions. One counts down and displays the time in the seconds section of the page. The other counts down and displays the time in the minutes section of the page.
+
