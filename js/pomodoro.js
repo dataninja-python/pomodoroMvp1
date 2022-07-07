@@ -26,7 +26,8 @@ const main = (event) => {
 		secDOMObj: {},
 		currentState: "",
 		currentMin: 0,
-		currentSec: 0
+		currentSec: 0,
+		startPomodoro: true
 	};
 
 	timerObj.focusTime = startFocusMinutes;
@@ -40,6 +41,7 @@ const main = (event) => {
 
 	timerObj.currentMin = 0;
 	timerObj.currentSec = 0;
+	timerObj.startPomodoro = true;
 
 	/* Utility Functions */
 	const decreaseTime = (passedTime) => {
@@ -103,6 +105,7 @@ const main = (event) => {
 	};
 
 	const displayToBrowser = (passedObj) => {
+		let tmpObj = passedObj;
 		let currentMin = tmpObj.currentMin;
 		let currentSec = tmpObj.currentSec;
 		let currentState = tmpObj.currentState;
@@ -127,93 +130,37 @@ const main = (event) => {
 		let currentMin = tmpObj.currentMin;
 		let currentSec = tmpObj.currentSec;
 		let currentState = tmpObj.currentState;
-		let decreaseMin = false;
 		let states = tmpObj.states;
+		let startSecs = tmpObj.seconds;
+		let firstTime = tmpObj.startPomodoro;
 
 		// set everything up if it makes sense
-		if (tmpObj.currentState == "") {
+		if (firstTime) {
 			tmpObj = setUp(tmpObj);
+			tmpObj.startPomodoro = false;
+			console.log("setting things up");
 		}
 
-		tmpObj.stateDOMObj.innerHTML = currentState;
-		tmpObj.minDOMObj.innerHTML = String(currentMin);
-		tmpObj.secDOMObj.innerHTML = String(currentSec);
-
-		// displayToBrowser(tmpObj);
+		displayToBrowser(tmpObj);
 
 		// run logic to test if should decrease second again
-		// first check to see if minutes are at zero if so end program
-		/*
-		if ( currentSec == 0 && currentMin == 0 ) {
-			console.log("switch to next state or end");
-			if (currentState == states[2]) {
-				console.log("end");
-			} else {
-				if (currentState == states[0]) {
-					currentState = states[1];
-					console.log(`switching to ${currentState} state`);
-				} else {
-					currentState = states[2];
-					console.log(`switching to ${currentState} state`);
-				}
-			}
-		} else if ( currentSec == 0 ) {
-			console.log("reset the minutes");
-		}*/
+		// if both seconds and minutes = 0, then switch state
+		if (currentSec == 0 && currentMin == 0) {
+		} else if (currentSec == 0) {
+			// reset seconds and decrement minutes
+			currentSec = startSecs;
+			tmpObj = minuteCountDown(tmpObj);
+			tmpObj.currentSec = currentSec;
 
-		switch (currentState) {
-			case "":
-				// from start state
-				tmpObj = setUp(tmpObj);
-				console.log("program set up");
-				console.log("switch to focus state");
-				break;
-			case states[0]:
-				// from focus state
-				if (currentMin == 0 && currentSec == 0) {
-					console.log(`change from state: ${states[0]}`);
-					console.log(`change to state: ${states[1]}`);
-					currentState = states[1];
-					currentMin = tmpObj.restTime;
-					currentSec = tmpObj.seconds; 
-				} else if (currentSec == 0) {
-					console.log(`reset seconds to: ${tmpObj.seconds}`);
-					console.log(`countdown minutes: ${currentMin}`);
-					currentSec = tmpObj.seconds;
-					tmpObj = minuteCountDown(tmpObj);
-				}
-				break;
-			case states[1]:
-				// from rest state
-				if (currentMin == 0 && currentSec == 0) {
-					console.log(`change from state: ${states[1]}`);
-					console.log(`change to state: ${states[2]}`);
-					currentState = states[2];
-					currentMin = 0;
-					currentSec = 0; 
-					console.log(`stopping program`);
-					stopPomodoro();
-				} else if (currentSec == 0) {
-					console.log(`reset seconds to: ${tmpObj.seconds}`);
-					console.log(`countdown minutes: ${currentMin}`);
-					currentSec = tmpObj.seconds;
-					tmpObj = minuteCountDown(tmpObj);
-				}
-				break;
-			case states[2]:
-				console.log("why am I seeing the wait switch case?");
-				break;
-			default:
-				console.log("error with counting minutes passed 0. have all state conditions been entered?");
+		} else {
+			// normal second countdown
+			tmpObj = secondCountDown(tmpObj);
 		}
-
-		// count down seconds
-		tmpObj = secondCountDown(tmpObj);
 		return tmpObj;
 	};
 	
 	setInterval( ()=>{
-		runPomodoro(timerObj);
+		tmpObj = runPomodoro(timerObj);
 	}, 1000);
 
 };
