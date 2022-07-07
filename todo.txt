@@ -1,9 +1,18 @@
 
-[] display all items in the pomodoro object for testing purposes
-	[] loop over all items in the object continuously with 2-3 second delay (1 second is definately too short)
-	[] hitting a button in browser halts loop
+[x] display all items in the pomodoro object for testing purposes
+	[x] loop over all items in the object continuously with 2-3 second delay (1 second is definately too short)
+	[x] hitting a button in browser halts loop
 
-[] use setInterval function to display a count down timer for the appropriate time
-	[] if in "focus" state, count down from 25 minutes
-	[] if in "rest" state, count down from 5 minutes
+[x] use setInterval function to display a count down timer for the appropriate time
+	[x] if in "focus" state, count down from 25 minutes
+	[x] if in "rest" state, count down from 5 minutes
 	[] after rest state, state becomes "waiting" (I believe) and a button must be pushed to start next timer
+
+[] fix switch statement bug
+[] attach event listener functionality to start and stop buttons
+	[] start button starts the timer
+	[] stop button stops the timer
+
+[] develop a more attractive UX/UI with figma
+
+[] consider rewriting using typescript and Sass

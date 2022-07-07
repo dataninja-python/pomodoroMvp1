@@ -19,18 +19,16 @@
 	<body>
 		<div class="container page-container">
 			<main class="container clock clock-wrapper">
-				<section class="container timer-container">
+				<section class="container clock-grid">
+					<div class="clock-minutes-area">
+						<h2 id="min-counter">00</h2>
+					</div>
 					<div class="row">
-						<div class="eight columns minutes-container">
-							<h2 id="min-counter">00</h2>
+						<div class="clock-status-area">
+							<h6 id="status-state" class="">FOCUS</h6>
 						</div>
-						<div class="four columns status-container minutes-container">
-							<div class="row status-wrapper">
-								<h6 id="status-state">FOCUS</h6>
-							</div>
-							<div class="row seconds-wrapper">
-								<h4 id="sec-counter">00</h4>
-							</div>
+						<div class="clock-seconds-area">
+							<h4 id="sec-counter" class="">00</h4>
 						</div>
 					</div>
 				</section>

@@ -17,6 +17,45 @@
 	border: 2px solid red;
 }
 
+.minutes-wrapper {
+	grid-auto-rows: auto;
+	border: 2px solid red;
+}
+
+.clock-minutes-area {
+	grid-area: min;
+}
+
+.clock-status-area {
+	grid-area: stat;
+}
+
+.clock-seconds-area {
+	grid-area: sec;
+}
+
+.clock-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+	"min min min status status"
+	"min min min status status"
+	"min min min sec sec"
+	"min min min sec sec"
+	"min min min sec sec";
+	grid-column-gap: 2px;
+	grid-row-gap: 3px;
+}
+
+.center-both {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	max-height: 125px;
+}
+
 /* Reserved CSS */
 /*
 .page-container {

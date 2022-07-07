@@ -120,8 +120,8 @@ const main = (event) => {
 		console.log(`current object displayed: ${tmpObj}`);
 	};
 
-	const stopPomodoro = () => {
-		clearInterval(runPomodoro);
+	const stopPomodoro = (aFunction) => {
+		clearInterval(aFunction);
 	}
 
 	// combining setUp, secondCountDown and minuteCountDown
@@ -134,18 +134,41 @@ const main = (event) => {
 		let startSecs = tmpObj.seconds;
 		let firstTime = tmpObj.startPomodoro;
 
-		// set everything up if it makes sense
-		if (firstTime) {
-			tmpObj = setUp(tmpObj);
-			tmpObj.startPomodoro = false;
-			console.log("setting things up");
-		}
-
 		displayToBrowser(tmpObj);
 
 		// run logic to test if should decrease second again
 		// if both seconds and minutes = 0, then switch state
 		if (currentSec == 0 && currentMin == 0) {
+			// change state
+			switch(currentState) {
+				case states[0]:
+					console.log(`switch from ${states[0]} state`);
+					tmpObj.currentState = states[1];
+					let newTmpTime = tmpObj.restTime;
+					tmpObj.currentMin = newTmpTime;
+					tmpObj.currentSec = startSecs;
+					break;
+				case states[1]:
+					// setting everything to waiting state
+					console.log(`switch from ${states[1]} state`);
+					tmpObj.currentState = states[2];
+					tmpObj.currentMin = 0;
+					tmpObj.currentSec = 0;
+					clearInterval(runPomodoro);
+					break;
+				case states[2]:
+					console.log(`switch from ${states[2]} state`);
+					break;
+				default:
+					// set everything up if it makes sense
+					if (firstTime) {
+						tmpObj = setUp(tmpObj);
+						tmpObj.startPomodoro = false;
+						console.log("setting things up");
+					} else {
+						console.log("error when switching states;")
+					}
+			}
 		} else if (currentSec == 0) {
 			// reset seconds and decrement minutes
 			currentSec = startSecs;
