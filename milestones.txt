@@ -79,3 +79,5 @@ Jul 7
 
 Interestingly, I was able to create two quick count down functions. One counts down and displays the time in the seconds section of the page. The other counts down and displays the time in the minutes section of the page.
 
+	- update:
+		- again, I have overcomplicated this problem forcing too many logic forks. time for a simplifying refactor

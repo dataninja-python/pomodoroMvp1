@@ -49,7 +49,7 @@ const runPomodoro = () => {
 const pomodoroLoop = (passedObj) => {
 	let internalObj = passedObj;
 	displayTime();
-	const timerInterval = setInterval(() => { pomodoroLoop(internalObj }, 1000);
+	const timerInterval = setInterval(() => { pomodoroLoop(internalObj) }, 1000);
 }
 
 const displayTime = () => {
