@@ -39,7 +39,7 @@ const main = (event) => {
 	timerObj.minDOMObj = minutesElement;
 	timerObj.secDOMObj = secondsElement;
 
-	timerObj.stateDOMObj.innerHTML = "TEST";
+	// timerObj.stateDOMObj.innerHTML = "TEST";
 
 	const setUp = (passedObj) => {
 		let tmpObj = passedObj;
@@ -77,9 +77,14 @@ const main = (event) => {
 		let currentState = tmpObj.currentState;
 		let currentMin = tmpObj.currentMin;
 		let currentSec = tmpObj.currentSec;
-
+		let displayMin = tmpObj.minDOMObj;
+		let displaySec = tmpObj.secDOMObj;
+		let displayState = tmpObj.stateDOMObj;
 		// display the current values
-		
+		displayState.innerHTML = currentState;
+		displayMin.innerHTML = String(currentMin);
+		displaySec.innerHTML = String(currentSec);
+
 		// Change the values with large switch value below
 		switch(true) {
 			case (changeState == true && currentState == ""): // switch to focus state and start
@@ -92,14 +97,18 @@ const main = (event) => {
 				// enter the code
 				break;
 			case (currentSec == 0): // decrease minutes and restart seconds
-				// enter the code
+				currentMin = decreaseTime(currentMin);
+				currentSec = startSecs;
+				break;
+			case  (currentSec > 0 && currentMin > 0): // countdown on timer
+				tmpObj.currentMin = currentMin;
+				tmpObj.currentSec = currentSec;
+				tmpObj.currentState = currentState;
 				break;
 			default: // uh, our logic is screwed up
 				console.log("error in runTimer function");
 		}
-
 		return tmpObj;
-
 	};
 
 	// quick pseudocode
@@ -109,13 +118,13 @@ const main = (event) => {
 	// when minutes and seconds equal zero a pomodoro is done
 	// if last pomodoro or stopped by user end
 	
+	let aMin = startSeconds;
 	// how to tell first pomodoro
-	/* let aMin = 60
 	setInterval( ()=>{
-		let tmpMin = aMin;
-		console.log(tmpMin);
-		aMin = decreaseTime(tmpMin);
-	}, 1000);*/
+		timerObj.secDOMObj.innerHTML = String(aMin);
+		let tmpSec = aMin;
+		aMin = decreaseTime(tmpSec);
+	}, 1000);
 
 };
 
