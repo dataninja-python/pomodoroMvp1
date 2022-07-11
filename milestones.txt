@@ -82,3 +82,13 @@ Interestingly, I was able to create two quick count down functions. One counts d
 	- update:
 		- again, I have overcomplicated this problem forcing too many logic forks. time for a simplifying refactor
 		- refactoring was an exellent decision. found several bugs. simplified the logic down to 3 events: (a) change state (first time or Min && Sec == 0), (b) decrease minutes (Sec == 0), and (c) regular function of decreasing seconds
+
+
+-----------------------------------
+
+Jul 11
+
+I'm back. Spent a fair amount of time working to understanding grid design and flexbox. Now looking to make the simple timer attractive.
+
+	- update:
+		- need to do first git update since last week

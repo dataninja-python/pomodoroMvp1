@@ -3,10 +3,6 @@
 	border: 2px solid red;
 }*/
 
-* {
-	box-sizing: border-box;
-}
-
 .page-container {
 	margin-top: 15%;
 }
@@ -23,6 +19,9 @@
 
 .grid-container {
 	display: grid;
+	grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+	grid-template-columns: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+	grid-auto-rows: 60px;
 	column-gap: 20px;
 	row-gap: 20px;
 	border: 1px solid gray;
@@ -61,3 +60,14 @@
 	font-weight: 500;
 }
 
+/* Reserved CSS */
+/*
+.page-container {
+	margin-top: 25%;
+	border: 1px solid red;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+*/

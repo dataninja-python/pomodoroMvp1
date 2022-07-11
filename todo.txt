@@ -16,3 +16,10 @@
 [] develop a more attractive UX/UI with figma
 
 [] consider rewriting using typescript and Sass
+
+
+------------------------------------------------------------
+OTHER
+
+[x] created a bash github automation script
+[x] created multiple grid and flexbox container pages to play with

@@ -1,0 +1,16 @@
+/* assumes watching on phone first */
+/* Testing
+* {
+	border: 2px solid red;
+}*/
+
+/* inspired to keep it simple with symbols and lots of white space by solanum and apple apps */
+
+
+.grid-container {
+	display: grid;
+}
+
+.grid-items {
+	display: flex;
+}

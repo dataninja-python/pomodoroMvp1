@@ -1,0 +1,40 @@
+/* assumes watching on phone first */
+
+/* * {
+	border: 1px solid red;
+} */
+
+
+/* inspired to keep it simple with symbols and lots of white space by solanum and apple apps */
+
+.container {
+	margin-top: 5%;
+}
+
+.box {
+	background-color: #444;
+	color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-items {
+	/*border: 1px solid gray;*/
+}
+
+.grid-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	background-color: #fff;
+	color: #444;
+	border: 2px solid red;
+}

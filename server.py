@@ -1,9 +1,21 @@
 # app.py
 
+# too simple to use in production
+# please don't do this
+from random import seed, choice
+
 import http.server
 import socketserver
 
-PORT=8000
+portList = [8000 + i for i in range(20)]
+
+# generate a seed
+# seed(3)
+
+print(portList)
+selection = choice(portList)
+
+PORT=selection
 
 Handler = http.server.SimpleHTTPRequestHandler
 
