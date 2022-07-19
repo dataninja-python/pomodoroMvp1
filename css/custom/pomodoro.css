@@ -21,14 +21,11 @@
 	align-self: center;
 }
 
-.grid {
+.grid-container {
 	display: grid;
-	gap: 1.5rem;
-	grid-template-columns: repeat(4, 1fr);
-	padding-block: 2rem;
-	width: min(95%, 70rem);
-	margin-inline: auto;
-	border: 1px solid red;
+	column-gap: 20px;
+	row-gap: 20px;
+	border: 1px solid gray;
 }
 
 .grid-item {

@@ -19,7 +19,6 @@ printf "\n"
 
 echo "getting password"
 
-
 # add all files to git
 echo "addig files to git update"
 git add .

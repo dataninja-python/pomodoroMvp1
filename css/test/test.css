@@ -1,0 +1,11 @@
+/* 
+ *
+ * view all borders useful for testing
+ * TODO: remove before going to production
+ *
+ * */
+
+* {
+	padding: 2px;
+	border: 1px solid red;
+}

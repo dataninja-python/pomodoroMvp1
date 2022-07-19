@@ -17,19 +17,18 @@
 
 	<body>
 
-		<div id="page-container" class="wrapper">
-			<div class="grid">
-				<div class="grid-sub-a">
-					<div>one</div>
-					<div>two</div>
-				</div>
-				<div class="grid-sub-b">
-					<div>one</div>
-					<div>two</div>
-				</div>
-				<div class="grid-sub-c">
-					<div>one</div>
-					<div>two</div>
+		<div id="page-container" class="container">
+			<div class="wrapper vertical-center">
+				<div class="grid">
+					<div class="grid-item">1</div>
+					<div class="grid-item">2</div>
+					<div class="grid-item">3</div>
+					<div class="grid-item">4</div>
+					<div class="grid-item">5</div>
+					<div class="grid-item">6</div>
+					<div class="grid-item">7</div>
+					<div class="grid-item">8</div>
+					<div class="grid-item">9</div>
 				</div>
 			</div>
 		</div>

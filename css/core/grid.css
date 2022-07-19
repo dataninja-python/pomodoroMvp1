@@ -1,0 +1,73 @@
+/* 
+ * Grid scaffolding upon which pages are built 
+ * All pages are laid out using a grid format
+ * This should allow me to programmatically generate them in the future.
+ *
+ * */
+
+/*
+ *
+ * Grid basics
+ * 
+ */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100vh;
+}
+
+/* gaps between columns*/
+.grid-container-gap-1px {
+	grid-gap: 1px;
+}
+
+.grid-container-gap-2px {
+	grid-gap: 2px;
+}
+
+.grid-container-gap-3px {
+	grid-gap: 3px;
+}
+
+.grid-container-gap-4px {
+	grid-gap: 4px;
+}
+
+.grid-container-gap-5px {
+	grid-gap: 5px;
+}
+
+.grid-container-gap-6px {
+	grid-gap: 6px;
+}
+
+.grid-container-gap-7px {
+	grid-gap: 7px;
+}
+
+.grid-container-gap-8px {
+	grid-gap: 8px;
+}
+
+.grid-container-gap-9px {
+	grid-gap: 9px;
+}
+
+.grid-container-gap-10px {
+	grid-gap: 10px;
+}
+
+.grid-container {
+	display: grid;
+	grid-auto-rows: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-item {
+	justify-self: center;
+	align-self: center;
+	width: 100%;
+}
+

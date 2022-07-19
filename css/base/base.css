@@ -1,0 +1,279 @@
+/*
+ * starting page styling
+ * sources:
+ * 	https://www.w3schools.com/css
+ * 	https://developer.mozilla.org/en-US/docs/Web/CSS
+ *
+ */
+
+html, 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: serif, Tahoma, Arial;
+	width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* only works with block items with specific height */
+.overflow-auto {
+	overflow: auto;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.overflow-scroll {
+	overflow: scroll;
+}
+
+/*
+ *
+ * flex centering
+ *
+ *
+ */
+
+/* vertical and horizontal */
+.flex-vertical-horizontal-center-full {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.flex-vertical-horizontal-center-height-100px {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-height: 100px;
+}
+
+.flex-vertical-horizontal-center-height-150px {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-height: 150px;
+}
+
+.flex-vertical-horizontal-center-height-200px {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-height: 200px;
+}
+
+.flex-vertical-horizontal-center-max-height-300px {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-height: 300px;
+}
+
+/*
+ *
+ * Relative Horizontal Centering
+ *
+ *
+ */
+
+.rh-center-100 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.rh-center-95 {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.rh-center-90 {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.rh-center-85 {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.rh-center-80 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.rh-center-75 {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.rh-center-70 {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.rh-center-65 {
+	width: 65%;
+	margin: 0 auto;
+}
+
+.rh-center-60 {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.rh-center-55 {
+	width: 55%;
+	margin: 0 auto;
+}
+
+.rh-center-50 {
+	width: 50%;
+	margin: 0 auto;
+}
+
+/*
+ *
+ * Exact Pixel Horizontal Centering
+ * 
+ *
+ */
+
+.x-center-25 {
+	width: 25px;
+	margin: 0 auto;
+}
+
+.x-center-50 {
+	width: 50px;
+	margin: 0 auto;
+}
+
+.x-center-75 {
+	width: 75px;
+	margin: 0 auto;
+}
+
+.x-center-100 {
+	width: 100px;
+	margin: 0 auto;
+}
+
+.x-center-125 {
+	width: 125px;
+	margin: 0 auto;
+}
+
+.x-center-150 {
+	width: 150px;
+	margin: 0 auto;
+}
+
+.x-center-175 {
+	width: 175px;
+	margin: 0 auto;
+}
+
+.x-center-200 {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.x-center-225 {
+	width: 225px;
+	margin: 0 auto;
+}
+
+.x-center-250 {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.x-center-275 {
+	width: 275px;
+	margin: 0 auto;
+}
+
+.x-center-300 {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.x-center-325 {
+	width: 325px;
+	margin: 0 auto;
+}
+
+.x-center-350 {
+	width: 350px;
+	margin: 0 auto;
+}
+
+.x-center-375 {
+	width: 375px;
+	margin: 0 auto;
+}
+
+.x-center-400 {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.x-center-425 {
+	width: 425px;
+	margin: 0 auto;
+}
+
+.x-center-450 {
+	width: 450px;
+	margin: 0 auto;
+}
+
+.x-center-475 {
+	width: 475px;
+	margin: 0 auto;
+}
+
+.x-center-500 {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.x-center-525 {
+	width: 525px;
+	margin: 0 auto;
+}
+
+.x-center-550 {
+	width: 550px;
+	margin: 0 auto;
+}
+
+
+/*
+ *
+ * Horizontal centering
+ * note: uses exact pixel sizing
+ *
+ */
+
+
+/*
+ *
+ * text centering
+ * note: affects text only
+ *
+ */
+.center-text {
+	text-align: center;
+}
+
